@@ -1,0 +1,101 @@
+.service
+    position: relative
+
+    display: flex
+    flex-direction: column
+
+    padding-top: 24px
+    padding-right: 25px
+    padding-bottom: 27px
+    padding-left: 25px
+
+    color: #585857
+    font-family: Verdana, sans-serif
+    font-size: 16px 
+
+    &:nth-child(2)
+        &:after,
+        &:before
+            position: absolute
+
+            width: 1px
+            height: 566px
+
+            content: ''
+
+            background-color: #f1521b
+
+        &:after
+            right: 0
+        &:before
+            left: 0
+
+
+    &__title
+        margin-bottom: 20px
+
+        height: 30px
+        color: #585857
+        font-family: $p
+        font-size: 15px 
+        text-align: center
+        line-height: 1
+        text-transform: uppercase
+        span
+            display: block
+            color: #f1521b
+            font-size: 20px
+            
+
+    &__list
+        margin-bottom: 15px
+        counter-reset: listservice
+
+
+    &__item
+        position: relative
+        margin-bottom: 5px
+        font-size: 10px
+        line-height: 1.6
+        &:before
+            padding-right: 4px
+            content: counter(listservice) '.'
+            counter-increment: listservice
+            font-size: 10px
+            font-weight: 700
+        
+        &:last-child
+            margin-bottom: 0
+
+    &__price
+        margin-top: auto
+        margin-bottom: 10px
+        font-family: $r
+        color: #000000
+        display: flex
+        justify-content: center
+        align-items: baseline
+        line-height: 1
+    &__curr
+        margin-right: 5px
+        font-size: 15px
+        font-weight: 400 
+    &__price-val
+        font-weight: 500 
+        font-size: 32px
+
+    &__button-w
+        text-align: center
+
+    &__button
+        padding-top: 7px
+        padding-right: 33px
+        padding-bottom: 7px
+        padding-left: 33px
+        display: inline-block
+        background-color: #f1521b
+        text-transform: uppercase
+
+
+
+

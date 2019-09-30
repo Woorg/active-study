@@ -1,0 +1,120 @@
+.reviews
+    background: #FFF 
+    &__in
+        padding-top: 56px
+        padding-bottom: 75px
+    &__title
+        margin-bottom: 24px
+        margin-right: 50px
+        text-align: center
+        @include r($sm)
+            margin-right: 0
+    &__carousel
+        padding-right: 88px
+        padding-left: 38px
+        @include r($sm)
+            padding-right: 0
+            padding-left: 0
+    &__article
+        border: 1px solid #dedede
+        margin-left: 12px
+        margin-right: 12px
+        padding-top: 15px
+        padding-right: 15px
+        padding-bottom: 13px
+        padding-left: 15px
+        width: 164px
+        
+        text-align: center
+    &__link
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+
+    &__photo
+        position: relative
+        margin: auto
+        margin-bottom: 18px
+        width: 58px
+        height: 51px
+        background: url('../images/general/reviews-photo-bg.png') 0 0 no-repeat 
+        img
+            position: absolute
+            top: 7px
+            left: 8px
+            border-radius: 50%
+            
+    &__name-w
+        margin-bottom: 6px
+        height: 50px
+        overflow: hidden
+
+    &__name
+        color: #585857
+        font-size: 15px
+        font-family: $p
+        line-height: 1.4
+
+    &__role
+        margin-top: -4px
+        padding-right: 20px
+        padding-left: 20px
+        color: #585857
+        font-family: $p
+        font-size: 10px
+        line-height: 1
+
+    &__text
+        margin-bottom: 26px
+        font-family: Verdana, sans-serif
+        font-size: 10px
+        line-height: 1.5
+
+    &__more
+        color: #c94c2a
+        font-family: $r
+        font-size: 10px
+        font-weight: 400
+        line-height: 1
+
+    &__social
+        position: relative
+        z-index: 2
+        margin: auto
+        width: 60px
+        display: flex
+        justify-content: space-between
+
+    &__social-link
+        text-decoration: none
+
+
+    .slick-next
+        @include r($sm)
+            right: -45px
+
+
+    .slick-dots
+        bottom: -40px
+        padding-right: 130px
+        @include r($sm)
+            padding-right: 0
+        li
+            width: 6px
+            height: 6px
+            background-color: #585857
+            border-radius: 50%
+            @include tr(opacity .3s ease)
+            button
+                padding: 0
+                width: 6px
+                height: 6px
+                &:before
+                    display: none
+              
+        .slick-active
+            background-color: #f1521b
+            @include tr(opacity .3s ease)
+

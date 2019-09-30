@@ -1,0 +1,95 @@
+.footer
+  background-color: #25232e
+  overflow: hidden
+  &__body
+    padding-top: 24px
+    padding-bottom: 18px
+    color: #ffffff
+    font-family: $r
+    font-size: 13px
+    font-weight: 400
+    line-height: 1.461
+    @include r($md)
+      padding-bottom: 0
+    .footer__in
+        display: flex
+        @include r($md)
+          flex-wrap: wrap
+          justify-content: center
+        
+        
+        
+  &__col
+    width: 50%
+    @include r($md)
+      width: 100%
+    &:first-child
+      padding-left: 40px
+      
+      @include r($md)
+        padding-left: 0
+
+    &:last-child
+      padding-left: 82px
+    
+      @include r($md)
+        padding-left: 0
+
+  &__subscribe
+    margin-bottom: 10px
+    
+  &__contacts
+    @include r($md)
+      margin-bottom: 10px
+    a
+      color: #fff
+      text-decoration: none 
+      
+  // &__phones
+
+  &__phone,
+  &__email,
+  &__skype
+    display: flex
+    
+  &__phone-title,
+  &__email-title,
+  &__skype-title
+    padding-right: 6px
+    
+  &__bottom
+    padding-top: 18px
+    padding-bottom: 23px
+    .footer__in
+        display: flex
+        align-items: flex-end
+        @include r($md)
+          justify-content: center
+          flex-wrap: wrap
+  &__map
+    width: 345px
+    height: 172px
+    filter: grayscale(100%)
+    
+  &__copyright-w
+    font-family: $r
+    font-size: 15px
+    font-weight: 400
+    
+    @include r($md)
+      margin-top: 20px
+
+  &__copyright
+    color: #f6f6f6
+  &__design
+    color: #57555E
+
+
+.subscribe
+  &__title
+    margin-bottom: 14px
+    color: #ffffff
+    font-family: Verdana, sans-serif
+    font-size: 13px
+    font-weight: 400
+    line-height: 1

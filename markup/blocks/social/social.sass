@@ -1,0 +1,33 @@
+.social
+    display: flex
+    &__item
+        margin-right: 8px
+        width: 20px
+        height: 20px
+        &:nth-child(3)
+            margin-right: 46px
+            
+            @include r($md)
+                margin-right: 8px
+         
+        &:last-child
+            margin-right: 0
+    &__link
+        width: 20px
+        height: 20px
+        display: block
+        background-size: cover
+        text-align: right
+        text-indent: -9999px
+        @include tr(opacity .3s ease)
+        &:hover
+            opacity: .8
+            @include tr(opacity .3s ease)
+        
+
+.social_secondary
+    .social__item
+        &:nth-child(3)
+            margin-right: 8px
+
+

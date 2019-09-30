@@ -1,0 +1,71 @@
+.text 
+  overflow: hidden
+  &__in
+    padding-top: 35px
+    padding-bottom: 43px
+    text-align: center
+  &__title
+    margin-right: 50px
+    margin-bottom: 30px
+    text-align: center
+    
+    @include r($md)
+      margin-right: 0
+  
+  &__slider
+    margin: auto
+    margin-left: 106px
+    max-width: 605px
+    width: 100%
+    
+    @include r($md)
+      margin-left: 0
+    
+  &__entry
+    color: #000000
+    font-family: Verdana, Arial, "Helvetica Neue", Helvetica, sans-serif
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
+    text-align: justify
+
+  // .slick-arrow
+  //   width: 21px
+  //   height: 38px
+  //   opacity: 0.8
+  //   background: url('../images/general/arrow.png') 0 0 no-repeat 
+  //   @include tr(opacity .3s ease)
+  //   &:before
+  //     display: none
+      
+  //   &:hover
+  //     opacity: 0.2
+  //     @include tr(opacity .3s ease)
+        
+    
+  // .slick-prev
+  //   left: -60px
+  //   transform: translateY(-50%) rotate(180deg) 
+  .slick-next
+    right: -45px  
+
+
+  .slick-dots
+    li
+      width: 6px
+      height: 6px
+      background-color: #585857
+      border-radius: 50%
+      @include tr(opacity .3s ease)
+      button
+        padding: 0
+        width: 6px
+        height: 6px
+        &:before
+          display: none
+          
+    .slick-active
+      background-color: #f1521b
+      @include tr(opacity .3s ease)
+
+

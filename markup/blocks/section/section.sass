@@ -1,0 +1,26 @@
+.section
+  overflow: hidden
+  background-position: 50% 0 
+  background-size: cover
+
+
+  .slick-arrow
+    top: 50%
+    width: 21px
+    height: 38px
+    opacity: 0.8
+    background: url('../images/general/arrow.png') 0 0 no-repeat 
+    @include tr(opacity .3s ease)
+    &:before
+      display: none
+      
+    &:hover
+      opacity: 0.2
+      @include tr(opacity .3s ease)
+        
+    
+  .slick-prev
+    left: -45px
+    transform: translateY(-50%) rotate(180deg) 
+  .slick-next
+    right: 14px

@@ -1,0 +1,39 @@
+// Common styles of the project
+html,
+body
+  height: 100%
+  
+img
+  max-width: 100%
+  height: auto
+  
+.page
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  background-color: #fff
+  color: #000000
+  font-family: Verdana
+  font-size: 13px
+  font-weight: 400
+  line-height: 1.111
+  font-display: swap
+
+  &__wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+  &__inner
+    flex-grow: 1
+    flex-shrink: 0
+    flex-basis: auto
+    overflow: hidden
+.in
+  margin: auto
+  padding-right: 15px
+  padding-left: 15px
+  width: 100%
+  max-width: 904px
+  +r($sm)
+    max-width: 320px
