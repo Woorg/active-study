@@ -3,13 +3,14 @@
     &__in
         padding-bottom: 40px
         
+        @include rmin($sm)
+            padding-bottom: 80px
     &__title
         margin-bottom: 40px
         
         @include rmin($sm)
             margin-bottom: 70px
             
-        
         span,
         strong
             &:after
@@ -34,9 +35,12 @@
         text-align: left
         @include rmin($sm)
             margin-right: 60px
-            margin-bottom: 0
+            margin-bottom: 30px
             font-size: 30px
             line-height: 1
+            
+        @include rmin($md)
+            margin-bottom: 0
         
 
     &__button

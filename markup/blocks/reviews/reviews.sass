@@ -31,7 +31,11 @@
         @include tr(width .6s ease)
         
         @include rmin($sm)
-            padding-bottom: 190px
+            padding-bottom: 270px
+            
+        @include rmin($md)
+            padding-bottom: 270px
+            
          
 
     &__icon
@@ -48,7 +52,7 @@
         border-radius: 30px
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15)
         
-        @include tr(width .6s ease)
+        @include tr(all .6s ease)
         
         img
             position: absolute
@@ -83,7 +87,7 @@
     .slick-current
         position: relative
         z-index: 1
-        width: 280px
+        width: 230px
         @include tr(width .6s ease)
         
         &.reviews__item
@@ -93,15 +97,16 @@
             @include tr(width .6s ease)
 
         .reviews__icon
-            // position: absolute
+            position: absolute
             margin-top: -25px
-            // left: 50%
-            width: 100%
+            top: 0
+            left: 50%
+            width: 250px
             height: 250px
             // flex-basis: 21%
             
-            // transform: translateX(-50%)
-            @include tr(width .6s ease)
+            transform: translateX(-50%) scale(1.2)
+            @include tr(all .6s ease)
             
         .reviews__content
             display: block

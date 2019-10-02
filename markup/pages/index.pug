@@ -36,7 +36,7 @@ html(class="no-js", lang="ru")
                 +service()
                 +online()
                 +markets()
-                +cta()
+                +cta()#cta-first
                 +why()
                 +attraction()
                 +examples()
@@ -50,6 +50,7 @@ html(class="no-js", lang="ru")
             .page__footer
                 +footer()
                 +popup()
+
 
         script.
             var map;
@@ -70,7 +71,7 @@ html(class="no-js", lang="ru")
         script(src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDO60TDSumlziHzbybxGGbAEegP7zLX0Y&callback=initMap" async defer)
         script(src='%=static=%js/separate-js/jquery.min.js')
         script(src='%=static=%js/separate-js/slick.min.js')
-        //- script(src='%=static=%js/separate-js/jquery.mask.min.js')
+        script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')
 

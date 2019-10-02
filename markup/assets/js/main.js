@@ -1,14 +1,12 @@
 import svg4everybody from 'svg4everybody';
-import 'magnific-popup';
-import slick from 'slick-carousel';
-import 'jquery-mask-plugin';
-import LazyLoad from 'vanilla-lazyload';
 // import $ from 'jquery';
+// import magnificPopup from 'magnific-popup';
+// import slick from 'slick-carousel';
+import LazyLoad from 'vanilla-lazyload';
+// import 'jquery-mask-plugin';
 // import 'ion-rangeslider';
 // import Dropzone from 'dropzone';
 
-// import 'magnific-popup';
-// import slick from 'slick-carousel';
 // import "jquery-mask-plugin";
 // import bound from 'bounds.js';
 
@@ -60,6 +58,15 @@ import LazyLoad from 'vanilla-lazyload';
         $navTrigger.on('click', function () {
             $(this).toggleClass('nav__trigger_active');;            
 
+        });
+
+
+        $('.hero__button').on( 'click', function(e) {
+            e.preventDefault();
+            let _scroll = $(this).attr('href');
+            if (_scroll != '#' && $(_scroll).length) {
+                $('html, body').animate({ scrollTop: $(_scroll).offset().top - 120  }, 300);
+            }
         });
 
 
@@ -148,7 +155,7 @@ import LazyLoad from 'vanilla-lazyload';
                 speed: 600,
                 adaptiveHeight: true,
                 centerMode: true,
-                centerPadding: '15px',
+                centerPadding: '0',
                 variableWidth: false,
                 waitForAnimate: true,
                 focusOnSelect: true,
@@ -179,6 +186,85 @@ import LazyLoad from 'vanilla-lazyload';
         }
 
 
+        /* 
+            Form
+        */
+
+        // $('.open-popup').magnificPopup({
+        //     type:'inline',
+        //     midClick: true 
+        // });
+
+
+        var form = $('.cta__form'),
+            popup = $('.popup'),
+            form_data;
+
+        // Success function
+        function done_func(response) {
+            // popup.fadeIn().removeClass('popup__success_fail').addClass('popup__success_active');
+            
+            openPopup();
+
+            function openPopup() {
+
+                $.magnificPopup.open({
+                    items: {
+                        src: '#success'
+                    },
+                    type: 'inline'
+                });
+
+            }
+
+
+            // popup.text(response);
+
+            // setTimeout(function () {
+            //     popup.fadeOut();
+            // }, 2000);
+
+            // form.find('input:not([type="submit"]), textarea').val('');
+        }
+
+        // Fail function
+        function fail_func(data) {
+            // popup.text(data.responseText);
+
+            // setTimeout(function () {
+            //     popup.fadeOut();
+            // }, 2000);
+
+            openPopup();
+
+            function openPopup() {
+                $.magnificPopup.open({
+                    items: {
+                        src: '#fail'
+                    },
+                    type: 'inline'
+                });
+            }
+
+
+        }
+
+        form.submit(function (e) {
+
+
+            e.preventDefault();
+            form_data = $(this).serialize();
+
+            console.log(form_data);
+            
+            $.ajax({
+                type: 'POST',
+                url:  form.attr('action'),
+                data: form_data
+            })
+            .done(done_func)
+            .fail(fail_func);
+        });
 
 
     });
