@@ -1,63 +1,13 @@
 mixin footer(data)
     footer.footer
-        .footer__body
-            .footer__in.in
-                .footer__col
-                    .footer__subscribe.subscribe
-                        .subscribe__title Подпишитесь на наши новости и акции
-                        .subscribe__form.form.form_subscribe
-                            form(action="" method="post")
-                                .form__field
-                                    input.form__input(type="text", value="", placeholder="E-mail")
-                                input.form__submit.button.button_big(type="submit", value="Отправить")
+        .footer__in.in
+            .footer__top
+                a.footer__logo.logo.logo_secondary(href="#")
+                    img(src='assets/images/general/logo.png', srcset='assets/images/general/logo@2x.png 2x, assets/images/general/logo@3x.png 3x' alt="Study match")
 
-                    .footer__contacts 
-                        .footer__address г. Киев, ул. Б. Хмельницкого, 16-22, офис 507 
-                        .footer__phones
-                            .footer__phone 
-                                .footer__phone-title Наши телефоны:
-                                .footer__phone-val <a href="tel:+380952207420">+38 (095) 220 74 20</a>,<br/><a href="tel:+380970594993">+38 (097) 059 49 93</a>
-                    
-                        .footer__email
-                            .footer__email-title E-mail: 
-                            .footer__email-val <a href="mailto:manager@activestudy.com.ua">manager@activestudy.com.ua</a>
+                .footer__contacts
+                    a.footer__item(href="tel:+79507433862") +7 950 743 38 62
+                    a.footer__item(href="tel:+79507433861") +7 950 743 38 61
+                    a.footer__item(href="mailto:studymatchservis@mail.ru") studymatchservis@mail.ru
 
-                        .footer__skype
-                            .footer__skype-title Skype: 
-                            .footer__skype-val <a href="skype:active_study">active_study</a>
-
-                        .footer__site <a href="//www.activestudy.com.ua">www.activestudy.com.ua</a>
-
-                .footer__col
-                    #map.footer__map
-
-
-        .footer__bottom
-            .footer__in.in
-                .footer__col
-                    ul.footer__social.social.social_secondary
-                        li.social__item.social__item_fb
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/fb.png", alt="facebook")
-                        li.social__item.social__item_youtube
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/youtube.png", alt="Youtube")
-                        li.social__item.social__item_inst
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/instagram.png", alt="Instagram")
-                        li.social__item.social__item_telegram
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/telegram.png", alt="Telegram")
-                        li.social__item.social__item_whatsup
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/whatsup.png", alt="Whatsup")
-                        li.social__item.social__item_phone
-                            a.social__link(href="#link") 
-                                img(src="assets/images/general/phone.png", alt="Phone")
-
-               
-                .footer__col
-                    .footer__copyright-w
-                        .footer__copyright Copyright 2015 ActiveStudy. Все права защищены.
-                        .footer__design Дизайн от behance.net/LiliiaDrozd
-
+            .footer__copyright © Все права защищены 2019

@@ -1,175 +1,122 @@
 .nav
-    position: relative
-    flex-shrink: 1
-    flex-grow: 1
-
-    font-size: 12px
-    font-weight: 300
-    line-height: 1
-    
-    @include r($lg)
-        flex-grow: 0
-
+            
     &__trigger
-        position: absolute
-        top: 50%
-        right: 0
-        width: 30px
-        display: none
-        cursor: pointer
-        transform: translateY(-50%)
-        @include r($lg)
-            display: block
-            
-    &__trigger_active + .nav__list
-        position: absolute
-        top: calc(100% + 26px)
-        right: 0
-        padding-top: 10px
-        
-        width: 110px
-        
-        display: flex
-        flex-wrap: wrap
-        background-color: rgba(32, 32, 32, .8)
-        .nav__item
-            white-space: normal
-            width: 100%
-            
-        .nav__sub-w
-            position: static
-            margin-top: 0
-            padding-top: 0
-            &:after,
-            &:before
-                display: none
+        @include resetbutton()
+        width: 36px
+        height: 39px
+        background-size: cover
+        fill: #ff1ec7
+        @include tr(fill .3s ease)
+        &:hover
+            fill: darken(#ff1ec7, 10)   
+            @include tr(fill .3s ease)
 
-        .nav__link
-            padding-top: 10px
-            padding-bottom: 10px
-            padding-left: 10px
-            display: block
-       
-    &__trigger-line
-        margin-bottom: 6px
+    &__trigger_active + .nav__list-w
         display: block
-        height: 2px 
-        background: #FFF 
-        &:last-child
-            margin-bottom: 0
-    
+        @include tr(all .3s ease)
 
-    &__list
-        display: flex
-        @include r($lg)
-            display: none
-            
-    &__item
-        margin-right: 18px
-        white-space: nowrap
-        &:last-child
-            margin-right: 0
 
-    &__item_sub
-        position: relative
-
-        &:after
-            position: absolute
-            top: calc(50% + 1px)
-            right: -10px
-
-            width: 0
-            height: 0
-
-            content: ''
-            transform: translateY(-50%)
-
-            border-width: 5px 4px 0 4px
-            border-style: solid
-            border-color: #dededc transparent transparent transparent
-
-        &:hover
-            .nav__sub-w
-                display: block
-
-    &__link
-        padding-top: 19px
-        padding-bottom: 19px
-
-        text-decoration: none
-
-        color: #fff
-        @include tr(color .3s ease)
-        &:hover
-            color: darken(#fff, 10)
-            @include tr(color .3s ease)
-
-    &__sub-w
+    &__list-w
         position: absolute
         top: 100%
-        left: -7px
+        right: -20px
+        
+        padding-top: 55px
+        padding-left: 94px
+        padding-right: 70px
 
-        padding-top: 6px
         display: none
+        width: 100vw
+        height: calc(100vh - 98px)
+        background-color: #2e2e2e
+        border-radius: 0
+        opacity: 0.89
 
-        width: 111px
-
-        background-color: #3d3b3d
-        &:after,
-        &:before
-            position: absolute
-            top: 9px
-            left: 50%
-            content: ''
-            width: 8px
-            height: 5px
-            transform: translateX(-50%)
-
-        &:before
-            z-index: 0
-            top: 8px
-            width: 0
-            height: 0
-            border-style: solid
-            border-width: 0 4px 5px 4px
-            border-color: transparent transparent #8a8588 transparent
-
-        &:after
-            // z-index: 1
-            top: 10px
-            width: 0
-            height: 0
-            border-style: solid
-            border-width: 0 4px 5px 4px
-            border-color: transparent transparent #3d3b3d transparent
+        @include tr(all .3s ease)
+        
+        @include r($m)
+            padding-top: 20px
+            padding-left: 20px
+            padding-right: 20px
+            
+            
+        @include rmin($sm)
+            top: calc(100% + 11px)
+            right: -20px
+            padding-top: 150px
+            width: 470px
+            border-radius: 0 0 30px
 
 
+    // &__list
+            
+        
+    &__item
+        margin-bottom: 15px
+        
+        @include rmin($sm)
+            margin-bottom: 30px
 
-    &__sub
-        position: relative
-        margin-top: 7px
-        padding-top: 10px
-        padding-left: 14px
-        border: 1px solid #8a8588
-
-    &__sub-item
-        margin-bottom: 1px
-        white-space: normal
-
-    &__sub-item_active
-        .nav__sub-link
-            color: #c94c2a
-
-    &__sub-link
-        font-family: Verdana, Arial, "Helvetica Neue", Helvetica, sans-serif
-        font-size: 12px
-        font-weight: 400
-        line-height: 1.5
-
-        color: #f6f7f9
-        text-decoration: none
-        @include tr(color .3s ease)
         &:hover
-            color: #c94c2a
-            @include tr(color .3s ease)
+            .nav__link
+                font-weight: 700 
+                &:after
+                    background-color: #ff1ec7
+                    @include tr(all .1s ease)
+                
 
+
+    &__item_active,
+        .nav__link
+            font-weight: 700 
+            &:after
+                background-color: #ff1ec7
+                @include tr(all .1s ease)
+                
+
+
+
+    &__link
+        position: relative
+        padding-bottom: 5px
+        color: #ffffff
+        font-family: $a
+        font-size: 16px
+        font-weight: 400
+        line-height: 1.3
+        text-decoration: none
+        &:after
+            position: absolute
+            top: 100%
+            left: 0
+            content: '' 
+            width: 91px
+            height: 4px
+            background-color: transparent
+            border-radius: 2px
+            @include tr(all .1s ease)
+            
+
+
+    &__phones
+        margin-top: 30px
+        display: block
+        @include rmin($sm)
+            margin-top: 0
+            display: none
+            
+    .phones__phone
+        margin-bottom: 5px
+        
+    &__email
+        margin-top: 25px
+        display: block
+        color: #ffffff
+        font-family: $a
+        font-size: 18px
+        font-weight: 700
+        line-height: 1.2
+        text-decoration: none
+        @include rmin($sm)
+            margin-top: 0
+            display: none

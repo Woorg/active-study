@@ -1,53 +1,67 @@
 .cta
-	background: #161617 
-	&__w
-		position: relative
-		background-position: 0 0 
-		background-repeat: no-repeat
-		&:after
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			content: ""
-			display: none
-			background: rgba(0,0,0,.6)
-			@include r($sm)
-				display: block
-		
-	&__in
-		padding-top: 50px
-		padding-bottom: 60px
-		
-	&__col
-		position: relative
-		z-index: 1
-		margin-left: 50%
-		padding-left: 72px
-		width: 50%
-		@include r($sm)
-			margin-left: 0
-			padding-left: 0
-			width: 100%
+    background-color: #2e2e2e
+    overflow: hidden
+    &__in
+        padding-top: 50px
+        padding-bottom: 50px
+        @include rmin($sm)
+            padding-top: 40px
+            padding-bottom: 40px
+            
 
-	&__title
-		margin-bottom: 12px
+    &__title
+        margin-bottom: 40px
+        text-align: center
+        @include rmin($lg)
+            margin-bottom: 70px
+         
 
-	&__text
-		color: #ffffff
-		font-family: Verdana, sans-serif
-		font-size: 13px
-		font-weight: 700
-		line-height: 1.538
-	&__form
-		margin-top: 66px
-		max-width: 344px
-		width: 100%
+    &__form
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: flex-start
+        @include rmin($lg)
+            margin-left: 0
+            margin-right: 0
+            flex-wrap: nowrap            
+    
+    .form__row
+        @include rmin($md)
+            justify-content: space-between
 
 
+    .form__field
+        margin-right: 0
+        max-width: 100%
+        flex-basis: 100%
+        
+        @include rmin($sm)
+            max-width: 48%
+            flex-basis: 48%
+            
+        @include rmin($lg)
+            margin-right: 30px
+            max-width: 100%
+            flex-basis: 100%
+            
+            
+    // &__text
 
+    .form__submit-w
+        width: 100%
+        text-align: center
 
-.cta_inner
-	background-position: 50% 0 
-	background-size: cover
+    .form__submit
+        max-width: 100%
+        flex-basis: 100%
+        display: inline-block
+        
+        @include rmin($sm)
+            max-width: 40%
+            flex-basis: 40%
+            
+        @include rmin($lg)
+            max-width: 24%
+            flex-basis: 24%
+            

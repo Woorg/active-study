@@ -1,106 +1,147 @@
 .header
-  position: absolute
-  z-index: 1
-  top: 0
-  left: 0
-  width: 100%
-  font-family: $r
-  &__top
-    padding-top: 11px
-    padding-bottom: 15px
+    position: fixed
+    z-index: 2
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #2e2e2e
+    color: #fff 
+    font-family: arial, sans-serif
+    font-size: 18px
+    line-height: 1.2
     
-  &__in
-    display: flex
-    align-items: center
-    @include r($md)
-      flex-wrap: wrap
-    @include r($sm)
-      justify-content: center
+    &__in
+        padding-top: 40px
+        padding-bottom: 40px
+        height: 120px
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap      
+          
+        @include rmin($lg)
+            padding-top: 34px
+            padding-bottom: 29px
+            
+            flex-wrap: nowrap
+        
     
-  &__social
-    margin-right: 10px
-    margin-left: 92px
-    
-    @include r($md)
-      margin-left: 0
-      
-    @include r($sm)
-      margin-bottom: 10px
+    &__logo
+        margin-top: -40px
+        margin-right: 20px
+        
+        @include r($xl)
+            margin-right: auto
+        
+        @include rmin($sm)
+            margin-right: 20px
 
-  &__button
-    margin-right: 7px
-    @include r($md)
-      flex-grow: 1
-    @include r($sm)
-      margin-bottom: 10px
-    
+        @include rmin($md)
+            margin-top: -34px
 
-  &__phones
-    margin-right: 19px
-    @include r($md)
-      margin-left: auto
-     
-  &__search
-    margin-top: 8px
-    margin-right: 18px
-    
-    @include r($md)
-      flex-grow: 1
-
-  &__bottom
-    padding-top: 10px
-    padding-bottom: 4px
-    background-color: rgba(32, 32, 32, .8)
-
-  &__nav
-    margin-bottom: 10px
-
-  // &__lang
+        @include rmin($lg)
+            margin-right: 57px
 
 
-  &__logo
-    margin-right: 20px
-      
-  &__nav
-    @include r($lg)
-      margin-left: auto
+    &__email,
+    &__phone
+        display: none
+
+        text-decoration: none
+        color: #fff 
+        
+        @include rmin($md)
+            display: flex
+            flex-wrap: wrap
+
+    &__email
+        margin-top: 0
+        margin-right: 29px
+        display: none
+        font-weight: 700
+        @include tr(color .3s ease) 
+        
+        @include r($xl)
+            margin-right: auto
+            
+        @include rmin($sm)
+            display: flex
+        
+        @include rmin($lg)
+            margin-top: 19px
+            
+        &:hover
+            color: darken(#fff, 10)
+            @include tr(color .3s ease)
+
+    &__phones
+        margin-top: 0
+        margin-right: 32px
+        max-width: 144px
+        width: 100%
+        display: none
+        @include r($xl)
+            margin-right: 60px
+            margin-left: auto
+            
+        @include rmin($sm)
+            margin-top: 0
+            flex-wrap: wrap
+            display: flex
+        
+        // @include rmin($md)
+        
+        @include rmin($lg)
+            margin-top: 8px
+        
+        
+
+    &__address
+        margin-top: 20px
+        margin-right: 35px
+        max-width: 100%
+        width: 100%
+        font-weight: 700
+
+        @include r($xl)
+            margin-right: auto
+            
+        @include rmin($lg)
+            margin-top: 0
+            max-width: 256px
+            display: flex
+            
+
+        
+    &__langs
+        position: absolute
+        top: 52px
+        right: 76px
+       
+        @include rmin($sm)
+            position: absolute
+            top: 65px
+            right: auto
+            left: 260px
 
 
-.phones
-  &__phone
-    display: block
-    color: #3f4650
-    white-space: nowrap
-    font-size: 12px
-    font-weight: 500
-    line-height: 1.583
-    text-decoration: none
-    @include tr(color .3s ease)
-    &:hover
-      color: lighten(#3f4650, 10)
-      @include tr(color .3s ease)
+        @include rmin($lg)
+            position: static
+            margin-top: 18px
+            margin-right: 60px
+            
+        @include rmin($xl)
+            margin-right: auto
+        
 
-
-.lang
-  display: flex
-  font-size: 12px
-  font-weight: 400
-  text-transform: uppercase
-  letter-spacing: 0.03px
-  &__link
-    color: #ffffff
-    text-decoration: none
-    @include tr(color .3s ease)
-    &:hover
-      color: #c94c2a
-      @include tr(color .3s ease)
-    
-    
-  &__link_active
-    color: #c94c2a
-    @include tr(color .3s ease)
-  &__sep
-    padding-left: 6px
-    padding-right: 6px
-    color: #c94c2a
-
+            // display: flex
+        
+    &__nav
+        position: absolute
+        top: 34px
+        right: 20px
+        margin-top: 7px
+        margin-left: auto
+        
+        @include rmin($lg)
+            position: static
+        

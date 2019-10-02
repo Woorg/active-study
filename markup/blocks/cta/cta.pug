@@ -1,38 +1,13 @@
 mixin cta(data)
-    section.cta.section.lazy(data-bg="url('assets/images/general/cta-bg.png')")
-        .cta__w.lazy(data-bg="url('assets/images/general/cta-img.png')")
-            .cta__in.in
-                .cta__col
-                    h2.cta__title.title.title_big Наши консультации бесплатны
-                    .cta__text Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время
-                    .cta__form.form.form_contacts
-                        form(action="" method="post")
-                            .form__field
-                                input.form__input(type="text", value="", placeholder="Ваше имя" required)
-                            .form__field.form__field_phone
-                                input.form__input(type="text", value="", placeholder="Телефон" required)
-                            .form__field
-                                input.form__input(type="text", value="", placeholder="E-mail" required)
-                            .form__field
-                                textarea.form__message(placeholder="Сообщение")
-                            input.form__submit.button.button_big(type="submit", value="Отправить")
-
-
-mixin cta-inner(data)
-    section.cta.cta_inner.section.lazy(data-bg="url('assets/images/content/cta-inner.jpg')")
-        .cta__w
-            .cta__in.in
-                .cta__col
-                    h2.cta__title.title.title_big Наши консультации бесплатны
-                    .cta__text Оставьте свои данные и наши специалисты свяжутся с Вами в ближайшее время
-                    .cta__form.form.form_contacts
-                        form(action="" method="post")
-                            .form__field
-                                input.form__input(type="text", value="", placeholder="Ваше имя" required)
-                            .form__field.form__field_phone
-                                input.form__input(type="text", value="", placeholder="Телефон" required)
-                            .form__field
-                                input.form__input(type="text", value="", placeholder="E-mail" required)
-                            .form__field
-                                textarea.form__message(placeholder="Сообщение")
-                            input.form__submit.button.button_big(type="submit", value="Отправить")
+    section.cta
+        .cta__in.in
+            h2.cta__title.title.title_medium Book a free consultation
+            form.cta__form.form(action="mail.php", method="post")
+                .form__row
+                    .form__field
+                        input.form__text(type="text", value="", placeholder="Your name" name="phone" required)
+                   
+                    .form__field
+                        input.form__text(type="text", value="", placeholder="Your Email" name="email" required)
+                    
+                input.form__submit.button(type="submit", value="Write to us")
